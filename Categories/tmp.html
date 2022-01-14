@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Apuntes de clase ya sabes sobre elementos semanticos para CEO" />
+    <link rel="stylesheet" type="text/css" href="../css/basicos.css">
+    <style>
+@charset "UTF-8";
+/* Color de fondo */
+body > header,
+main > section { background: lightgrey; }
+
+body > nav,
+article,
+body > footer { background: lightsteelblue; }
+
+main > aside { background: lightgreen; }
+
+/* Color de los encabezados */
+section h2,
+section h3,
+section h4,
+section h5,
+section h6 { color: grey; }
+
+body > nav,
+body > footer,
+article h2,
+article h3,
+article h4,
+article h5,
+article h6 { color: blue; }
+
+aside h2,
+aside h3,
+aside h4,
+aside h5,
+aside h6 { color: green; }
+
+/* Margen, aire y bordes redondeados */
+body > header,
+body > nav,
+body > footer,
+main > section,
+main > aside,
+article {
+    margin: 1em;
+    padding: 1em;
+    border-radius: 5px;
+}
+
+/* Eliminando ciertos estilos predeterminados  */
+body > nav h2,
+body > footer h2
+{ margin: 0; }
+
+/* Disposición flexible */
+main {
+    display: flex;
+    margin: 0 5%;
+    border: 1px solid green;
+}
+body > header figure {
+    display: inline-flex;
+    margin: 0 auto;
+}
+body > header h1 {
+    display: inline-flex;
+    vertical-align: top;
+    margin: 0 auto;
+    margin-top: 0.25em;
+}
+article {
+    padding: 1em;
+    margin-bottom: 1em;
+}
+table{
+    border-collapse:collapse;
+    caption-side: bottom;
+}
+caption{
+    font-weight:bold;
+    margin-top:16px;
+}
+th,td{padding:5px 10px;}
+td,th{border:1px solid #1c1c1c;text-align:center;}         
+</style>
+    <title>Elementos HTML5</title>
+</head>
+<body>
+    <header>
+        <a href="../index.html"
+        title="Inicio">
+        <figure>
+            <img src="../images/33.jpg" alt="Logo html" />
+        </figure>
+        <h1>HTML5 características | IFCD0110</h1>      
+        </a>
+    </header>
+    <nav>
+        <h2>Menú principal</h2>
+        <ul>
+            <li>
+                Categorías
+                <ul>
+                    <li>
+                        <a href="html5.html">HTML5</a>
+                    </li>
+                    <li>
+                        <a href="css.html">CSS</a>
+                    </li>
+                    <li>
+                        <a href="js.html">JS</a>
+                    </li>
+                    <li>
+                        <a href="loremipsum.html">Loremipsum</a>
+                    </li>
+                </ul>
+
+            </li>
+            <li>
+                <a href="../pages/mriña lucense.html">Nosotros</a>
+            </li>
+            <li>
+                <a href="../pages/contacto.html">Contacto</a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <h2>Marcado de texto</h2>
+            <article>
+                <h3 id="enfasis">Enfasis</h3>
+                <p>
+                    El elemento <strong>em</strong>
+                </p>
+                <p>
+                    Cuando queremos dar énfasis al lenguaje hablado, acentuamos ciertas palabras y así alteramos sutilmente el significado de lo que decimos.<br /> De manera similar, en el lenguaje escrito ponemos palabras en cursiva para destacarlas. Por ejemplo, las dos siguientes frases tienen diferente significado:
+                </p>
+                <p>
+                    Me alegro de que no llegues tarde.
+                </p>
+                <p>
+                    Me <em>alegro</em> de que no <em>llegues</em> tarde.
+                </p>
+                <p>
+                    La primera frase suena aliviada porque la persona no llega tarde. Por el contrario, la segunda suena sarcástica y un tanto pasivo-agresiva, expresa molestia porque la persona ha llegado algo tarde.
+                </p>
+            </article>
+            <article>
+                <h3 id="Importancia">Importancia</h3>
+                <p>
+                    <strong>El elemento</strong>
+                </p>
+                <p>
+                    Para enfatizar palabras importantes al hablar solemos acentuarlas, y al escribir lo hacemos en estilo negrita. Por ejemplo:
+                </p>
+                <p>
+                    Cuento contigo. <strong>¡No llegues tarde!</strong>
+                </p>
+                <p>
+                    En HTML usamos el elemento strong (importancia fuerte) para marcar tales expresiones. El documento resulta entonces más útil, y de nuevo los lectores de pantalla reconocen estos elementos y el tono de voz cambia a uno más fuerte.
+                </p>
+
+            </article>
+            <article>
+                <h3>Plagiando House</h3>
+                    <blockquote cite="https://es.wikipedia.org/wiki/House_M._D.">
+                        <p>
+                            House M. D. ha gozado de la preferencia de la crítica y del público desde su lanzamiento, convirtiéndose en uno de los programas televisivos más vistos en los Estados Unidos y en todo el mundo. Ha recibido diversos reconocimientos y nominaciones, entre los que destacan un premio Peabody, dos Globos de Oro y tres premios Emmy. Fue la serie más vista en 2008, con un promedio de ochenta y dos millones de personas en sesenta y seis países. La sexta temporada comenzó con un episodio de dos horas, el 21 de septiembre de 2009 en Estados Unidos y terminó a principios de junio de 2010. El 8 de febrero de 2012, los productores de la serie, David Shore y Katie Jacobs, así como su protagonista Hugh Laurie, dieron a conocer a través de un comunicado de prensa que la serie llegaría a su fin después de ocho temporadas. «La decisión de terminar el programa ahora o en cualquier otro momento, es dolorosa, por el riesgo de separarnos de cientos de amistades cercanas que hemos hecho a lo largo de estos ocho años, pero también porque el programa en sí mismo ha sido fuente de gran orgullo para todos los involucrados», comienza el comunicado firmado por los productores y el actor. El episodio final «Everybody Dies» fue transmitido el 21 de mayo de 2012 seguido de un documental especial llamado Swan Song. 
+                        </p>
+                    </blockquote>
+                    <a href="">https://es.wikipedia.org/wiki/House_M._D.
+                        <cite>House M.D</cite>   
+                    </a>
+                    <p>
+                        Articulo <cite> House M.D</cite>de wikipedia esta cita <q>¿Obtengo puntos extra si actuo como si me importara?</q>
+                    </p>
+                    <table>
+                        <caption>Ciudades del mundo</caption>
+                        <thead>
+                            <tr>
+                                <th>País</th>
+                                <th>Capital</th>
+                                <th>Otras ciudades</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>España</td>
+                                <td>Madrid</td>
+                                <td>Barcelona,Lugo,Salamanca,Cuenca</td>
+                            </tr>
+                            <tr>
+                                <td>Francia</td>
+                                <td>Paris</td>
+                                <td>Lyon,Marsella,Nantes,Toulouse</td>
+                            </tr>
+                            <tr>
+                                <td>Portugal</td>
+                                <td>Lisboa</td>
+                                <td>Oporto,Coimbra,Bragança</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>
+                                 <table>
+                        <thead>
+                            <tr>
+                                <th>Ranking</th>
+                                <th>Nombre</th>
+                                <th>Poderes</th>
+                                <th>Debilidades</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Superman</td>
+                                <td>Demasiados para contar</td>
+                                <td>Un par que tampoco conozco</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Dominic Toreto</td>
+                                <td>El poder de la familia</td>
+                                <td>Los coches diesel 1.0TSI</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Hulk</td>
+                                <td>1 o 2 depende</td>
+                                <td>Pantalones no flexibles</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Ned Flanders</td>
+                                <td>El poder de cristo</td>
+                                <td>Cuchillas gillete</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Kiko Rivera</td>
+                                <td>Capacidad de crear "musica"</td>
+                                <td>Alopecia desde los 12</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>Batman</td>
+                                <td>Dollar americano</td>
+                                <td>Un señor disfrazado de pingüino</td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>Santiago Segura</td>
+                                <td>Amistad con Guillermo del Toro</td>
+                                <td>El humor</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </p>
+            </article>
+        </section>
+        <aside>
+            <h2>Menú lateral</h2>
+            <nav>
+                <h3>Menú de navegación</h3>
+                <ul>
+                    <li> <a href="#enfasis">articulo enfasis</a>
+                    </li>
+                    <li> <a href="#Importancia">articulo importante</a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+    </main>
+    <footer>
+        <h2>Imagen</h2>
+        <figcaption>Monbús en lugo 2007</figcaption>
+            <img src="https://images.pexels.com/photos/3255500/pexels-photo-3255500.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" alt= "Monbus en lugo en 2015">
+    </footer>
+    <footer>
+        <h2>Video</h2>
+            <video src="https://www.w3schools.com/html/mov_bbb.mp4" controls> 
+                <p>
+                    Su navegador no es compatible con video HTML. Puede ver el video en este enlace:
+                    <a href="https://www.w3schools.com/html/mov_bbb.mp4" title= "ver video en este enlace"target="_blank">Video animado random</a>
+                </p>             
+            </video>
+    </footer>
+</body>
+</html>

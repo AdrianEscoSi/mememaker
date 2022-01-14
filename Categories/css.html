@@ -1,293 +1,214 @@
 <!DOCTYPE html>
-<html>
+<html lang="es" dir="ltr">
+
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Apuntes de clase ya sabes sobre elementos semanticos para CEO" />
-    <link rel="stylesheet" type="text/css" href="../css/basicos.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estilos css 1</title>
+    <link rel="stylesheet" href="../categories/styles.css">
     <style>
-@charset "UTF-8";
-/* Color de fondo */
-body > header,
-main > section { background: lightgrey; }
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            
+        }
 
-body > nav,
-article,
-body > footer { background: lightsteelblue; }
+        * {
+            color: red;
+        }
 
-main > aside { background: lightgreen; }
+        /*Esto anula y sustituye al anterior*/
 
-/* Color de los encabezados */
-section h2,
-section h3,
-section h4,
-section h5,
-section h6 { color: grey; }
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: black
+            font-family: 'Bebas Neue', cursive;
+        }
 
-body > nav,
-body > footer,
-article h2,
-article h3,
-article h4,
-article h5,
-article h6 { color: blue; }
+        li,
+        a,
+        p {
+            color: dimgrey;
+        }
 
-aside h2,
-aside h3,
-aside h4,
-aside h5,
-aside h6 { color: green; }
 
-/* Margen, aire y bordes redondeados */
-body > header,
-body > nav,
-body > footer,
-main > section,
-main > aside,
-article {
-    margin: 1em;
-    padding: 1em;
-    border-radius: 5px;
-}
+        header h1 {
+            /* La propiedad height establece el alto */
+            /* La propiedad padding es el relleno */
+            /* Background color es el color de fondo */
+            width: 100%;
+            height: 50px;
+            padding: 8px;
+            background-color: gray;
+        }
 
-/* Eliminando ciertos estilos predeterminados  */
-body > nav h2,
-body > footer h2
-{ margin: 0; }
+        nav {
+            /* Esto es un borde liso color rojo de 1px */
+            border: 1px solid red;
+        }
 
-/* Disposición flexible */
-main {
-    display: flex;
-    margin: 0 5%;
-    border: 1px solid green;
-}
-body > header figure {
-    display: inline-flex;
-    margin: 0 auto;
-}
-body > header h1 {
-    display: inline-flex;
-    vertical-align: top;
-    margin: 0 auto;
-    margin-top: 0.25em;
-}
-article {
-    padding: 1em;
-    margin-bottom: 1em;
-}
-table{
-    border-collapse:collapse;
-    caption-side: bottom;
-}
-caption{
-    font-weight:bold;
-    margin-top:16px;
-}
-th,td{padding:5px 10px;}
-td,th{border:1px solid #1c1c1c;text-align:center;}         
-</style>
-    <title>Elementos HTML5</title>
+        footer {
+            background-color: black;
+            /* El color esablece el color de texto del footer */
+            color: white;
+            width: 100%;
+            height: 80px;
+            padding: 10px;
+            /* Line height establece el alto de la linea de texto */
+            line-height: 80px;
+            /* text-align establece el centrado de la linea de texto */
+            text-align: center;
+        }
+
+        article {
+            /* El widght establece el ancho de todos los articles */
+            padding: 10px;
+            /* El padding establece el relleno de todos los articles */
+            margin: 3%;
+            /* El margin establece el margen de todos los articles en top,bottom,right y left */
+            width: 45%;
+            /* El border establece la anchura y color del borde */
+            border: 1px solid black
+        }
+
+        article,
+        article p,
+        article h2 {
+            background-color: white;
+            /* Establece el color de fondo para todos los articles, p  y h2 */
+        }
+
+        /* Esto establece el ancho al 100% para todos los article herederos de un article y section*/
+        section article article {
+            width: 100%;
+        }
+
+        /* Este codigo anula y sustituye el anterior */
+        section article {
+            width: 100%;
+            margin-left: 0%;
+            margin-right: 0%;
+            margin: 3% 0;
+        }
+
+    </style>
 </head>
+
 <body>
     <header>
-        <a href="../index.html"
-        title="Inicio">
-        <figure>
-            <img src="../images/33.jpg" alt="Logo html" />
-        </figure>
-        <h1>HTML5 características | IFCD0110</h1>      
-        </a>
+        <h1>Mis primeros estilos</h1>
     </header>
     <nav>
-        <h2>Menú principal</h2>
         <ul>
-            <li>
-                Categorías
-                <ul>
-                    <li>
-                        <a href="html5.html">HTML5</a>
-                    </li>
-                    <li>
-                        <a href="css.html">CSS</a>
-                    </li>
-                    <li>
-                        <a href="js.html">JS</a>
-                    </li>
-                    <li>
-                        <a href="loremipsum.html">Loremipsum</a>
-                    </li>
-                </ul>
-
-            </li>
             <li>
                 <a href="../pages/mriña lucense.html">Nosotros</a>
             </li>
             <li>
                 <a href="../pages/contacto.html">Contacto</a>
             </li>
+            <li>
+                <a href="../index.html">Inicio</a>
+            </li>
         </ul>
     </nav>
     <main>
         <section>
-            <h2>Marcado de texto</h2>
+            <h3>Cómo incluir CSS en un documento XHTML</h3>
             <article>
-                <h3 id="enfasis">Enfasis</h3>
                 <p>
-                    El elemento <strong>em</strong>
+                    Los estilos se definen en una zona específica del propio documento HTML. Se emplea la etiqueta <em>style</em> de HTML y solamente se pueden incluir en la cabecera del documento (sólo dentro de la sección <em>head</em>).
                 </p>
                 <p>
-                    Cuando queremos dar énfasis al lenguaje hablado, acentuamos ciertas palabras y así alteramos sutilmente el significado de lo que decimos.<br /> De manera similar, en el lenguaje escrito ponemos palabras en cursiva para destacarlas. Por ejemplo, las dos siguientes frases tienen diferente significado:
+                    Este método se emplea cuando se define un número pequeño de estilos o cuando se quieren incluir estilos específicos en una determinada página HTML que completen los estilos que se incluyen por defecto en todas las páginas del sitio web.
                 </p>
                 <p>
-                    Me alegro de que no llegues tarde.
+                    El principal inconveniente es que si se quiere hacer una modificación en los estilos definidos, es necesario modificar todas las páginas que incluyen el estilo que se va a modificar.
                 </p>
                 <p>
-                    Me <em>alegro</em> de que no <em>llegues</em> tarde.
-                </p>
-                <p>
-                    La primera frase suena aliviada porque la persona no llega tarde. Por el contrario, la segunda suena sarcástica y un tanto pasivo-agresiva, expresa molestia porque la persona ha llegado algo tarde.
+                    Los ejemplos mostrados en este libro utilizan este método para aplicar CSS al contenido HTML de las páginas. De esta forma el código de los ejemplos es más conciso y se aprovecha mejor el espacio.
                 </p>
             </article>
             <article>
-                <h3 id="Importancia">Importancia</h3>
+                <h3>Definir CSS en un archivo externo</h3>
                 <p>
-                    <strong>El elemento</strong>
+                    En este caso, todos los estilos CSS se incluyen en un archivo de tipo CSS que las páginas HTML enlazan mediante la etiqueta
+                    <em>link</em>. Un archivo de tipo CSS no es más que un archivo simple de texto cuya extensión es .css Se pueden crear todos los archivos CSS que sean necesarios y cada página HTML puede enlazar tantos archivos CSS como necesite.
                 </p>
                 <p>
-                    Para enfatizar palabras importantes al hablar solemos acentuarlas, y al escribir lo hacemos en estilo negrita. Por ejemplo:
-                </p>
-                <p>
-                    Cuento contigo. <strong>¡No llegues tarde!</strong>
-                </p>
-                <p>
-                    En HTML usamos el elemento strong (importancia fuerte) para marcar tales expresiones. El documento resulta entonces más útil, y de nuevo los lectores de pantalla reconocen estos elementos y el tono de voz cambia a uno más fuerte.
-                </p>
+                    Si se quieren incluir los estilos del ejemplo anterior en un archivo CSS externo, se deben seguir los siguientes pasos:
 
-            </article>
-            <article>
-                <h3>Plagiando House</h3>
-                    <blockquote cite="https://es.wikipedia.org/wiki/House_M._D.">
-                        <p>
-                            House M. D. ha gozado de la preferencia de la crítica y del público desde su lanzamiento, convirtiéndose en uno de los programas televisivos más vistos en los Estados Unidos y en todo el mundo. Ha recibido diversos reconocimientos y nominaciones, entre los que destacan un premio Peabody, dos Globos de Oro y tres premios Emmy. Fue la serie más vista en 2008, con un promedio de ochenta y dos millones de personas en sesenta y seis países. La sexta temporada comenzó con un episodio de dos horas, el 21 de septiembre de 2009 en Estados Unidos y terminó a principios de junio de 2010. El 8 de febrero de 2012, los productores de la serie, David Shore y Katie Jacobs, así como su protagonista Hugh Laurie, dieron a conocer a través de un comunicado de prensa que la serie llegaría a su fin después de ocho temporadas. «La decisión de terminar el programa ahora o en cualquier otro momento, es dolorosa, por el riesgo de separarnos de cientos de amistades cercanas que hemos hecho a lo largo de estos ocho años, pero también porque el programa en sí mismo ha sido fuente de gran orgullo para todos los involucrados», comienza el comunicado firmado por los productores y el actor. El episodio final «Everybody Dies» fue transmitido el 21 de mayo de 2012 seguido de un documental especial llamado Swan Song. 
-                        </p>
-                    </blockquote>
-                    <a href="">https://es.wikipedia.org/wiki/House_M._D.
-                        <cite>House M.D</cite>   
-                    </a>
-                    <p>
-                        Articulo <cite> House M.D</cite>de wikipedia esta cita <q>¿Obtengo puntos extra si actuo como si me importara?</q>
-                    </p>
-                    <table>
-                        <caption>Ciudades del mundo</caption>
-                        <thead>
-                            <tr>
-                                <th>País</th>
-                                <th>Capital</th>
-                                <th>Otras ciudades</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>España</td>
-                                <td>Madrid</td>
-                                <td>Barcelona,Lugo,Salamanca,Cuenca</td>
-                            </tr>
-                            <tr>
-                                <td>Francia</td>
-                                <td>Paris</td>
-                                <td>Lyon,Marsella,Nantes,Toulouse</td>
-                            </tr>
-                            <tr>
-                                <td>Portugal</td>
-                                <td>Lisboa</td>
-                                <td>Oporto,Coimbra,Bragança</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <p>
-                                 <table>
-                        <thead>
-                            <tr>
-                                <th>Ranking</th>
-                                <th>Nombre</th>
-                                <th>Poderes</th>
-                                <th>Debilidades</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>Superman</td>
-                                <td>Demasiados para contar</td>
-                                <td>Un par que tampoco conozco</td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>Dominic Toreto</td>
-                                <td>El poder de la familia</td>
-                                <td>Los coches diesel 1.0TSI</td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td>Hulk</td>
-                                <td>1 o 2 depende</td>
-                                <td>Pantalones no flexibles</td>
-                            </tr>
-                            <tr>
-                                <td>4</td>
-                                <td>Ned Flanders</td>
-                                <td>El poder de cristo</td>
-                                <td>Cuchillas gillete</td>
-                            </tr>
-                            <tr>
-                                <td>5</td>
-                                <td>Kiko Rivera</td>
-                                <td>Capacidad de crear "musica"</td>
-                                <td>Alopecia desde los 12</td>
-                            </tr>
-                            <tr>
-                                <td>6</td>
-                                <td>Batman</td>
-                                <td>Dollar americano</td>
-                                <td>Un señor disfrazado de pingüino</td>
-                            </tr>
-                            <tr>
-                                <td>7</td>
-                                <td>Santiago Segura</td>
-                                <td>Amistad con Guillermo del Toro</td>
-                                <td>El humor</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    </p>
+                    <li>Si se quieren incluir los estilos del ejemplo anterior en un archivo CSS externo, se deben seguir los siguientes pasos: <em>p { color: black; font-family: Verdana; }</em></li>
+                    <li> Se guarda el archivo de texto con el nombre estilos.css Se debe poner especial atención a que el archivo tenga extensión .css y no .txt</li>
+                    <li>En la página HTML se enlaza el archivo CSS externo mediante la etiqueta <em>link</em>: <em></em></li>
+
+                </p>
+                <p>
+                    Cuando el navegador carga la página HTML anterior, antes de mostrar sus contenidos también descarga los archivos CSS externos enlazados mediante la etiqueta
+                    <em>link</em> y aplica los estilos a los contenidos de la página.
+                </p>
+                <p>
+                    Normalmente, la etiqueta
+                    <em>link</em> incluye cuatro atributos cuando enlaza un archivo CSS:
+                </p>
+                <p>
+                    <li>rel: indica el tipo de relación que existe entre el recurso enlazado (en este caso, el archivo CSS) y la página HTML. Para los archivos CSS, siempre se utiliza el valor stylesheet</li>
+                    <li>type: indica el tipo de recurso enlazado. Sus valores están estandarizados y para los archivos CSS su valor siempre es text/css</li>
+                    <li>href: indica la URL del archivo CSS que contiene los estilos. La URL indicada puede ser relativa o absoluta y puede apuntar a un recurso interno o externo al sitio web.</li>
+                    <li>media: indica el medio en el que se van a aplicar los estilos del archivo CSS. Más adelante se explican en detalle los medios CSS y su funcionamiento.</li>
+                </p>
             </article>
         </section>
-        <aside>
-            <h2>Menú lateral</h2>
-            <nav>
-                <h3>Menú de navegación</h3>
-                <ul>
-                    <li> <a href="#enfasis">articulo enfasis</a>
-                    </li>
-                    <li> <a href="#Importancia">articulo importante</a>
-                    </li>
-                </ul>
-            </nav>
-        </aside>
+        <section>
+            <article>
+                <h2>Lorem 1</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In metus vulputate eu scelerisque felis imperdiet. Commodo nulla facilisi nullam vehicula ipsum. Donec pretium vulputate sapien nec sagittis aliquam malesuada bibendum arcu. Mauris vitae ultricies leo integer malesuada nunc vel risus. Morbi tristique senectus et netus et malesuada fames ac. Nisi porta lorem mollis aliquam ut porttitor leo a diam. At lectus urna duis convallis convallis. Faucibus purus in massa tempor. Porttitor leo a diam sollicitudin tempor id eu. Nec dui nunc mattis enim ut tellus.</p>
+                <p>Lacus viverra vitae congue eu consequat ac felis. Morbi tempus iaculis urna id volutpat lacus laoreet non curabitur. Et magnis dis parturient montes nascetur ridiculus mus mauris vitae. Mi proin sed libero enim sed faucibus. Sed libero enim sed faucibus turpis in eu mi. Euismod elementum nisi quis eleifend. Fermentum odio eu feugiat pretium nibh ipsum. Pulvinar sapien et ligula ullamcorper malesuada proin libero nunc. Tristique nulla aliquet enim tortor at auctor urna nunc id. Ac turpis egestas integer eget aliquet. Pretium aenean pharetra magna ac placerat. Egestas diam in arcu cursus euismod quis viverra nibh. Ornare quam viverra orci sagittis eu volutpat odio facilisis. Turpis egestas maecenas pharetra convallis posuere morbi. Bibendum arcu vitae elementum curabitur vitae. In nibh mauris cursus mattis molestie a iaculis. Porttitor leo a diam sollicitudin tempor id eu. Bibendum neque egestas congue quisque. Sit amet cursus sit amet dictum sit amet. Nisl nunc mi ipsum faucibus vitae aliquet.</p>
+            </article>
+            <article>
+                <h2>Lorem 2</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In metus vulputate eu scelerisque felis imperdiet. Commodo nulla facilisi nullam vehicula ipsum. Donec pretium vulputate sapien nec sagittis aliquam malesuada bibendum arcu. Mauris vitae ultricies leo integer malesuada nunc vel risus. Morbi tristique senectus et netus et malesuada fames ac. Nisi porta lorem mollis aliquam ut porttitor leo a diam. At lectus urna duis convallis convallis. Faucibus purus in massa tempor. Porttitor leo a diam sollicitudin tempor id eu. Nec dui nunc mattis enim ut tellus.</p>
+                <p>Lacus viverra vitae congue eu consequat ac felis. Morbi tempus iaculis urna id volutpat lacus laoreet non curabitur. Et magnis dis parturient montes nascetur ridiculus mus mauris vitae. Mi proin sed libero enim sed faucibus. Sed libero enim sed faucibus turpis in eu mi. Euismod elementum nisi quis eleifend. Fermentum odio eu feugiat pretium nibh ipsum. Pulvinar sapien et ligula ullamcorper malesuada proin libero nunc. Tristique nulla aliquet enim tortor at auctor urna nunc id. Ac turpis egestas integer eget aliquet. Pretium aenean pharetra magna ac placerat. Egestas diam in arcu cursus euismod quis viverra nibh. Ornare quam viverra orci sagittis eu volutpat odio facilisis. Turpis egestas maecenas pharetra convallis posuere morbi. Bibendum arcu vitae elementum curabitur vitae. In nibh mauris cursus mattis molestie a iaculis. Porttitor leo a diam sollicitudin tempor id eu. Bibendum neque egestas congue quisque. Sit amet cursus sit amet dictum sit amet. Nisl nunc mi ipsum faucibus vitae aliquet.</p>
+            </article>
+            <article>
+                <h2>Lorem 2</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In metus vulputate eu scelerisque felis imperdiet. Commodo nulla facilisi nullam vehicula ipsum. Donec pretium vulputate sapien nec sagittis aliquam malesuada bibendum arcu. Mauris vitae ultricies leo integer malesuada nunc vel risus. Morbi tristique senectus et netus et malesuada fames ac. Nisi porta lorem mollis aliquam ut porttitor leo a diam. At lectus urna duis convallis convallis. Faucibus purus in massa tempor. Porttitor leo a diam sollicitudin tempor id eu. Nec dui nunc mattis enim ut tellus.</p>
+                <p>Lacus viverra vitae congue eu consequat ac felis. Morbi tempus iaculis urna id volutpat lacus laoreet non curabitur. Et magnis dis parturient montes nascetur ridiculus mus mauris vitae. Mi proin sed libero enim sed faucibus. Sed libero enim sed faucibus turpis in eu mi. Euismod elementum nisi quis eleifend. Fermentum odio eu feugiat pretium nibh ipsum. Pulvinar sapien et ligula ullamcorper malesuada proin libero nunc. Tristique nulla aliquet enim tortor at auctor urna nunc id. Ac turpis egestas integer eget aliquet. Pretium aenean pharetra magna ac placerat. Egestas diam in arcu cursus euismod quis viverra nibh. Ornare quam viverra orci sagittis eu volutpat odio facilisis. Turpis egestas maecenas pharetra convallis posuere morbi. Bibendum arcu vitae elementum curabitur vitae. In nibh mauris cursus mattis molestie a iaculis. Porttitor leo a diam sollicitudin tempor id eu. Bibendum neque egestas congue quisque. Sit amet cursus sit amet dictum sit amet. Nisl nunc mi ipsum faucibus vitae aliquet.</p>
+            </article>
+            <article>
+                <h2>Lorem 3</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In metus vulputate eu scelerisque felis imperdiet. Commodo nulla facilisi nullam vehicula ipsum. Donec pretium vulputate sapien nec sagittis aliquam malesuada bibendum arcu. Mauris vitae ultricies leo integer malesuada nunc vel risus. Morbi tristique senectus et netus et malesuada fames ac. Nisi porta lorem mollis aliquam ut porttitor leo a diam. At lectus urna duis convallis convallis. Faucibus purus in massa tempor. Porttitor leo a diam sollicitudin tempor id eu. Nec dui nunc mattis enim ut tellus.</p>
+                <p>Lacus viverra vitae congue eu consequat ac felis. Morbi tempus iaculis urna id volutpat lacus laoreet non curabitur. Et magnis dis parturient montes nascetur ridiculus mus mauris vitae. Mi proin sed libero enim sed faucibus. Sed libero enim sed faucibus turpis in eu mi. Euismod elementum nisi quis eleifend. Fermentum odio eu feugiat pretium nibh ipsum. Pulvinar sapien et ligula ullamcorper malesuada proin libero nunc. Tristique nulla aliquet enim tortor at auctor urna nunc id. Ac turpis egestas integer eget aliquet. Pretium aenean pharetra magna ac placerat. Egestas diam in arcu cursus euismod quis viverra nibh. Ornare quam viverra orci sagittis eu volutpat odio facilisis. Turpis egestas maecenas pharetra convallis posuere morbi. Bibendum arcu vitae elementum curabitur vitae. In nibh mauris cursus mattis molestie a iaculis. Porttitor leo a diam sollicitudin tempor id eu. Bibendum neque egestas congue quisque. Sit amet cursus sit amet dictum sit amet. Nisl nunc mi ipsum faucibus vitae aliquet.</p>
+            </article>
+            <article>
+                <h2>Lorem 4</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In metus vulputate eu scelerisque felis imperdiet. Commodo nulla facilisi nullam vehicula ipsum. Donec pretium vulputate sapien nec sagittis aliquam malesuada bibendum arcu. Mauris vitae ultricies leo integer malesuada nunc vel risus. Morbi tristique senectus et netus et malesuada fames ac. Nisi porta lorem mollis aliquam ut porttitor leo a diam. At lectus urna duis convallis convallis. Faucibus purus in massa tempor. Porttitor leo a diam sollicitudin tempor id eu. Nec dui nunc mattis enim ut tellus.</p>
+                <p>Lacus viverra vitae congue eu consequat ac felis. Morbi tempus iaculis urna id volutpat lacus laoreet non curabitur. Et magnis dis parturient montes nascetur ridiculus mus mauris vitae. Mi proin sed libero enim sed faucibus. Sed libero enim sed faucibus turpis in eu mi. Euismod elementum nisi quis eleifend. Fermentum odio eu feugiat pretium nibh ipsum. Pulvinar sapien et ligula ullamcorper malesuada proin libero nunc. Tristique nulla aliquet enim tortor at auctor urna nunc id. Ac turpis egestas integer eget aliquet. Pretium aenean pharetra magna ac placerat. Egestas diam in arcu cursus euismod quis viverra nibh. Ornare quam viverra orci sagittis eu volutpat odio facilisis. Turpis egestas maecenas pharetra convallis posuere morbi. Bibendum arcu vitae elementum curabitur vitae. In nibh mauris cursus mattis molestie a iaculis. Porttitor leo a diam sollicitudin tempor id eu. Bibendum neque egestas congue quisque. Sit amet cursus sit amet dictum sit amet. Nisl nunc mi ipsum faucibus vitae aliquet.</p>
+            </article>
+        </section>
+        <section>
+            <h2>Ejemplos articulos anidados de css</h2>
+            <article>
+                <h3>Anidado Lorem 1</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In metus vulputate eu scelerisque felis imperdiet. Commodo nulla facilisi nullam vehicula ipsum. Donec pretium vulputate sapien nec sagittis aliquam malesuada bibendum arcu. Mauris vitae ultricies leo integer malesuada nunc vel risus. Morbi tristique senectus et netus et malesuada fames ac. Nisi porta lorem mollis aliquam ut porttitor leo a diam. At lectus urna duis convallis convallis. Faucibus purus in massa tempor. Porttitor leo a diam sollicitudin tempor id eu. Nec dui nunc mattis enim ut tellus.</p>
+                <p>Lacus viverra vitae congue eu consequat ac felis. Morbi tempus iaculis urna id volutpat lacus laoreet non curabitur. Et magnis dis parturient montes nascetur ridiculus mus mauris vitae. Mi proin sed libero enim sed faucibus. Sed libero enim sed faucibus turpis in eu mi. Euismod elementum nisi quis eleifend. Fermentum odio eu feugiat pretium nibh ipsum. Pulvinar sapien et ligula ullamcorper malesuada proin libero nunc. Tristique nulla aliquet enim tortor at auctor urna nunc id. Ac turpis egestas integer eget aliquet. Pretium aenean pharetra magna ac placerat. Egestas diam in arcu cursus euismod quis viverra nibh. Ornare quam viverra orci sagittis eu volutpat odio facilisis. Turpis egestas maecenas pharetra convallis posuere morbi. Bibendum arcu vitae elementum curabitur vitae. In nibh mauris cursus mattis molestie a iaculis. Porttitor leo a diam sollicitudin tempor id eu. Bibendum neque egestas congue quisque. Sit amet cursus sit amet dictum sit amet. Nisl nunc mi ipsum faucibus vitae aliquet.</p>
+                <article>
+                    <h4>Anidado del anidado lorem 2</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In metus vulputate eu scelerisque felis imperdiet. Commodo nulla facilisi nullam vehicula ipsum. Donec pretium vulputate sapien nec sagittis aliquam malesuada bibendum arcu. Mauris vitae ultricies leo integer malesuada nunc vel risus. Morbi tristique senectus et netus et malesuada fames ac. Nisi porta lorem mollis aliquam ut porttitor leo a diam. At lectus urna duis convallis convallis. Faucibus purus in massa tempor. Porttitor leo a diam sollicitudin tempor id eu. Nec dui nunc mattis enim ut tellus.</p>
+                    <p>Lacus viverra vitae congue eu consequat ac felis. Morbi tempus iaculis urna id volutpat lacus laoreet non curabitur. Et magnis dis parturient montes nascetur ridiculus mus mauris vitae. Mi proin sed libero enim sed faucibus. Sed libero enim sed faucibus turpis in eu mi. Euismod elementum nisi quis eleifend. Fermentum odio eu feugiat pretium nibh ipsum. Pulvinar sapien et ligula ullamcorper malesuada proin libero nunc. Tristique nulla aliquet enim tortor at auctor urna nunc id. Ac turpis egestas integer eget aliquet. Pretium aenean pharetra magna ac placerat. Egestas diam in arcu cursus euismod quis viverra nibh. Ornare quam viverra orci sagittis eu volutpat odio facilisis. Turpis egestas maecenas pharetra convallis posuere morbi. Bibendum arcu vitae elementum curabitur vitae. In nibh mauris cursus mattis molestie a iaculis. Porttitor leo a diam sollicitudin tempor id eu. Bibendum neque egestas congue quisque. Sit amet cursus sit amet dictum sit amet. Nisl nunc mi ipsum faucibus vitae aliquet.</p>
+                </article>
+            </article>
+        </section>
+        <section></section>
+
     </main>
     <footer>
-        <h2>Imagen</h2>
-        <figcaption>Monbús en lugo 2007</figcaption>
-            <img src="https://images.pexels.com/photos/3255500/pexels-photo-3255500.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" alt= "Monbus en lugo en 2015">
-    </footer>
-    <footer>
-        <h2>Video</h2>
-            <video src="https://www.w3schools.com/html/mov_bbb.mp4" controls> 
-                <p>
-                    Su navegador no es compatible con video HTML. Puede ver el video en este enlace:
-                    <a href="https://www.w3schools.com/html/mov_bbb.mp4" title= "ver video en este enlace"target="_blank">Video animado random</a>
-                </p>             
-            </video>
+        <h2>Pié de página</h2>
     </footer>
 </body>
+
 </html>
