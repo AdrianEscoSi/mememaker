@@ -1,0 +1,74 @@
+@meta charset="utf-8"
+
+    
+artice.ej2 table { 
+        border-color: black;
+        border: black;
+}
+
+article.ej2 tr,
+th,
+td {
+    border: 1px solid black;
+    color: black;        
+}
+
+#titulo {
+    color: teal;
+}
+
+article.ej2 #subtitulo {
+    color: blue;
+}
+
+article.ej2 p strong,
+article.ej2 a   {
+    color: red;
+}
+
+article.ej2 span.destacado,
+article.ej2 td strong,
+article.ej2 th.especial {
+    color: orange;
+}
+
+article.ej2 h2#subtitulo {
+    color: blue;
+}
+
+article.ej2 span.especial {
+    color: purple;
+}
+
+article.ej2 a em {
+    color: blue;
+}
+
+article.ej2 div#adicional p {
+    color: olive;
+}
+
+article.ej2 div#adicional span#especial {
+    color: fuchsia;
+}
+
+article.ej2 div#adicional a {
+    color: green;
+}
+
+article.ej2 caption {
+    color: blue;
+}
+
+article.ej2 td {
+    color: green;
+}
+
+
+article.ej2 th {
+    color: red;
+}
+
+
+
+
