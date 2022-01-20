@@ -64,11 +64,14 @@ article.ej2 td {
     color: green;
 }
 
-
 article.ej2 th {
     color: red;
 }
 
+ul.galeria li {
+    background: lime;
+    display: inline-block;
+}
 
 
 
