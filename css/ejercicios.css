@@ -71,6 +71,7 @@ article.ej2 th {
 ul.galeria li {
     background: lime;
     display: inline-block;
+    list-style: none;
 }
 
 
